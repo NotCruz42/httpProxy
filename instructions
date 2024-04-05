@@ -1,0 +1,43 @@
+To test the modified Python proxy server implementation, you can follow these steps:
+
+1. **Setup an HTTP server**:
+   - You need an HTTP server that the proxy can connect to and retrieve resources from. You can set up a simple HTTP server using Python's built-in `http.server` module.
+   - Open a terminal and navigate to the directory containing the files you want to serve.
+   - Run the following command to start the HTTP server:
+     ```
+     python3 -m http.server
+     ```
+   - By default, this command starts the server on port 8000, serving files from the current directory.
+
+2. **Modify the proxy server code**:
+   - Replace `'www.example.com'` in the proxy server code with the IP address or hostname of your HTTP server.
+   - Ensure that the port used in the proxy server code matches the port your HTTP server is running on. By default, it is set to port 80.
+
+3. **Run the proxy server**:
+   - Save the modified Python proxy server code into a file, for example, `proxy_server.py`.
+   - Open a terminal window and navigate to the directory containing the `proxy_server.py` file.
+   - Run the following command to start the proxy server:
+     ```
+     python3 proxy_server.py
+     ```
+
+4. **Configure the client to use the proxy**:
+   - Configure your web browser or any other HTTP client to use the proxy server you just started. Set the proxy server address to `localhost` and the port to `8888` (or the port you specified in the proxy server code).
+
+5. **Test the proxy server**:
+   - Open your web browser and try accessing some websites or resources. The proxy server should intercept the requests and forward them to your HTTP server.
+   - Monitor the terminal window where the proxy server is running. You should see log messages indicating incoming connections and data transfer between the client, proxy server, and remote server.
+
+6. **Verify proxy server logs**:
+   - As the proxy server runs, it will print log messages to the terminal indicating connections and data transfer. This helps you verify that the proxy server is functioning as expected.
+
+
+
+
+
+
+
+Access the Server:
+
+Once the server is running, you can access it using your web browser or any HTTP client. Open your web browser and navigate to http://localhost:8000 
+You should see a directory listing of the files in the directory you specified. You can click on files to view them in your browser.
